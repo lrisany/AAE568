@@ -9,7 +9,6 @@ solinit = bvpinit(linspace(t0, tf), [.1;.1;.1;.1;.1;1;5]);
 options = bvpset('Stats', 'on', 'RelTol', 1e-1);
 solution = bvp4c(@BVP_ode_project, @boundary_conditions_project, solinit, options);
 
-
 I1 = 396.2;
 I2 = 1867;
 I3 = 1987.8;
@@ -59,6 +58,6 @@ xlabel('time (s)');
 ylabel('Control Torques (Nm)');
 legend('L1', 'L2', 'L3');
 
-
+hold off
 
 
